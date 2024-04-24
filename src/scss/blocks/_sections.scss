@@ -1,0 +1,5 @@
+.section {
+  &:not(:last-child) {
+    margin: 0 0 to-rem(96);
+  }
+}

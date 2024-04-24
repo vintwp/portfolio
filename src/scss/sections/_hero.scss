@@ -1,0 +1,132 @@
+.hero {
+  padding: to-rem(20) 0;
+
+  &__title {
+    max-width: 650px;
+    margin: 0 auto to-rem(39) auto;
+
+    font-size: to-rem(55);
+    font-weight: 800;
+    color: $color-white;
+    text-align: center;
+
+    span {
+      background: -webkit-linear-gradient(90deg, #ff8660 0%, #9a33ff 100%);
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+    }
+
+  }
+
+  &__avatar {
+    position: relative;
+
+    overflow: hidden;
+
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto to-rem(42) auto;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding: 0 0 100%;
+    }
+
+    img {
+      position: absolute;
+      z-index: 2;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 100%;
+
+      border-radius: 50%;
+    }
+
+    &-background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(138deg, #ff8660 0%, #8000ff 98.96%);
+      border-radius: 50%;
+    }
+  }
+
+  &__description {
+    margin: 0 auto to-rem(54) auto;
+
+    font-size: to-rem(18);
+    font-weight: 300;
+    line-height: 1.35;
+    color: $color-text1;
+    letter-spacing: 0.05em;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+
+    margin-bottom: to-rem(88);
+  }
+
+  &__technologies-title {
+    margin: 0 auto to-rem(48) auto;
+
+    font-size: to-rem(20);
+    font-weight: 600;
+    color: $color-text1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .list-technology {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .item-technology {
+    position: relative;
+    display: flex;
+    max-width: 60px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &__tooltip {
+      position: absolute;
+      z-index: 999;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: max-content;
+      padding: 10px;
+
+      font-size: 14px;
+      font-weight: 500;
+
+      visibility: hidden;
+      opacity: 0;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 4px;
+
+      transition: all $transition-time ease;
+    }
+
+    &:hover > .item-technology__tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

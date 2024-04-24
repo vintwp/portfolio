@@ -1,0 +1,13 @@
+.body {
+  height: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  &.lock {
+    overflow: overlay;
+  }
+}

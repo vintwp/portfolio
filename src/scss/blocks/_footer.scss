@@ -1,0 +1,49 @@
+.footer {
+  padding: to-rem(80) 0;
+  background-color: $color-black3;
+  &__title {
+    margin: 0 0 35px;
+
+    font-size: 23px;
+    font-weight: 700;
+    color: $color-white;
+    letter-spacing: 0.02em;
+  }
+
+  &__text {
+    margin: 0 0 to-rem(22);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__text,
+  &__email {
+    font-size: 14px;
+    color: $color-text1;
+    letter-spacing: 0.02em;
+  }
+
+  &__email {
+    display: block;
+    margin: 0 0 to-rem(41);
+    font-weight: 600;
+  }
+
+  &__social {
+    display: flex;
+    gap: 30px;
+
+    a {
+      font-size: 26px;
+      color: $color-white;
+    }
+  }
+
+  a {
+    transition: color $transition-time ease;
+  }
+
+  a:hover {
+    color: $color-blue1;
+  }
+}

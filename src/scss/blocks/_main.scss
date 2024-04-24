@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: to-rem(70) 0;
+
+  background-color: $color-black1;
+
+  section {
+    width: 100%;
+  }
+
+  section:not(:last-child) {
+    margin: 0 0 to-rem(96);
+  }
+}

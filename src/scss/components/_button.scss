@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+
+  padding: 16px 30px;
+
+  font-size: to-rem(22);
+  font-weight: 600;
+  color: $color-white;
+
+  background-color: transparent;
+  border: 2px solid $color-white;
+  border-radius: 50px;
+
+  &:hover {
+    color: $color-black1;
+    background-color: $color-white;
+    transition: color, background-color $transition-time ease;
+  }
+
+  &--filled {
+    color: $color-black1;
+    background-color: $color-white;
+  }
+
+  &--filled:hover {
+    color: $color-white;
+    background-color: transparent;
+  }
+}

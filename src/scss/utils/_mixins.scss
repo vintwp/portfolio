@@ -1,0 +1,29 @@
+@mixin text-typohraphy($fontSize, $lineHeight : 1, $fontWeight : 400) {
+  font-size: $fontSize + px;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+@mixin media-mobile {
+  @media (max-width: #{$bp-tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin media-desktop-xl {
+  @media (min-width: $bp-xldesktop) {
+    @content;
+  }
+}

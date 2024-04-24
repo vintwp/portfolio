@@ -1,0 +1,24 @@
+@import "fonts";
+@import "./utils/reset";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./utils/extends";
+@import "./utils/general";
+
+@import "./blocks/html";
+@import "./blocks/body";
+@import "./blocks/main";
+@import "./blocks/container";
+@import "./blocks/sections";
+@import "./blocks/header";
+@import "./blocks/footer";
+
+@import "./components/burger";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/project-card";
+
+@import "./sections/hero";
+@import "./sections/projects";
+@import "./sections/experience";

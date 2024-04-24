@@ -1,0 +1,101 @@
+.project-card {
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 390px;
+  min-height: 265px;
+
+  border-radius: 18px;
+
+  &__label {
+    position: absolute;
+    z-index: 9  ;
+    top: 15px;
+    left: 15px;
+
+    padding: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-black1;
+
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  &__thumb {
+    position: relative;
+    flex: 1;
+
+    img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(60%);
+
+    width: 100%;
+    padding: 12px 20px;
+
+    background-color: $color-black4;
+
+    transition: transform $transition-time ease;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.05;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+    gap: 20px;
+    padding: 0 5px;
+  }
+
+  &__description,
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: $color-white;
+
+  }
+
+  &__description {
+    margin: 0 0 20px;
+    padding: 0 5px;
+    line-height: 1.2;
+    color: $color-text1;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color $transition-time ease;
+
+    &:hover {
+      color: $color-blue1;
+    }
+  }
+
+  &:hover &__footer {
+    transform: translateY(0);
+  }
+}

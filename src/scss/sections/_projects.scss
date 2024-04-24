@@ -1,0 +1,47 @@
+.projects {
+  &__title {
+    margin: 0 0 to-rem(27);
+
+    font-family: var(--font-family);
+    font-size: to-rem(35);
+    font-weight: 800;
+    line-height: 1.02;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: linear-gradient(180deg, #ff8660 0%, #d5491d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+  .swiper-list {
+    position: relative;
+    width: 100%;
+    padding: 0 27px;
+  }
+
+  .swiper-slide > div {
+    margin: 0 auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $color-text1;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 26px;
+  }
+
+  .swiper-button-prev {
+    left: -6px;
+  }
+
+  .swiper-button-next {
+    right: -6px;
+  }
+
+}

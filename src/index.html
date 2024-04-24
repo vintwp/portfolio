@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {
+    "title": "Vitalii Parkhomenko Front-End Developer"
+  })
+  <body class="body">
+    <div class="body__wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+        @@include('html/hero.html')
+        @@include('html/projects.html')
+        @@include('html/experience.html')
+      </main>
+      @@include('html/footer.html', {})
+    </div>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <button type="button" class="modal__close" id="close-modal">
+            <span></span>
+          </button>
+        </div>
+        <div class="modal__content--inner">
+          <p class="modal__text">You can contact me via</p>
+          <div class="modal__links">
+            <a href="mailto:poroh1991ukr@gmail.com" class="modal__link">
+              <img src="@img/mail.svg" alt="Mail" onload="SVGInject(this)">
+            </a>
+            <a href="https://t.me/vintwp" class="modal__link" target="_blank">
+              <img src="@img/telegram.svg" alt="Mail" onload="SVGInject(this)">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
