@@ -29,7 +29,9 @@
 
   &__thumb {
     position: relative;
+    overflow: hidden;
     flex: 1;
+    border-radius: 18px;
 
     img {
       position: absolute;
