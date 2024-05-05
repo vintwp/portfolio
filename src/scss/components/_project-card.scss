@@ -29,9 +29,20 @@
 
   &__thumb {
     position: relative;
+
     overflow: hidden;
     flex: 1;
-    border-radius: 18px;
+
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .h-auto {
+      height: auto;
+    }
 
     img {
       position: absolute;
