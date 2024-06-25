@@ -367,7 +367,7 @@ html {
 
 .container {
   width: 100%;
-  max-width: 840px;
+  max-width: 992px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -828,17 +828,12 @@ html {
 
 .project-card__footer {
   position: absolute;
-  bottom: 0;
-  -webkit-transform: translateY(60%);
-      -ms-transform: translateY(60%);
-          transform: translateY(60%);
+  top: calc(100% - 50px);
   width: 100%;
   padding: 12px 20px;
   background-color: #2a2a2a;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-card__title {
@@ -885,10 +880,17 @@ html {
   color: #5badff;
 }
 
+.project-card__link--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: rgb(160, 158, 158);
+}
+
 .project-card:hover .project-card__footer {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  top: 100%;
+  -webkit-transform: translateY(-99%);
+      -ms-transform: translateY(-99%);
+          transform: translateY(-99%);
 }
 
 .hero {
