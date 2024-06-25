@@ -54,15 +54,14 @@
 
   &__footer {
     position: absolute;
-    bottom: 0;
-    transform: translateY(60%);
+    top: calc(100% - 50px);
 
     width: 100%;
     padding: 12px 20px;
 
     background-color: $color-black4;
 
-    transition: transform $transition-time ease;
+    transition: all $transition-time ease;
   }
 
   &__title {
@@ -106,9 +105,17 @@
     &:hover {
       color: $color-blue1;
     }
+
+    &--disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      color: rgb(160, 158, 158);
+    }
   }
 
   &:hover &__footer {
-    transform: translateY(0);
+    top: 100%;
+    // bottom: 0;
+    transform: translateY(-99%);
   }
 }
