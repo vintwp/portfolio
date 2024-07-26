@@ -318,6 +318,7 @@ html {
 }
 
 .body {
+  position: relative;
   height: 100%;
 }
 
@@ -333,10 +334,11 @@ html {
 }
 
 .body.lock {
-  overflow: overlay;
+  overflow: hidden;
 }
 
 .main {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,6 +380,7 @@ html {
 
 .header {
   position: relative;
+  z-index: 20;
   padding: 10px 0;
   text-align: center;
   background-color: #222;
@@ -610,21 +613,27 @@ html {
   background-color: transparent;
 }
 
-.modal {
+.overlay {
   position: fixed;
-  z-index: 9999;
   inset: 0;
   display: none;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal__content {
-  position: absolute;
-  top: 50%;
+.overlay.active {
+  z-index: 10;
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  z-index: 50;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  scale: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -632,18 +641,15 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 5px;
   min-width: 400px;
   min-height: 250px;
-  padding: 30px;
-  visibility: hidden;
-  opacity: 0;
+  padding: 20px;
   background-color: #222;
   border-radius: 10px;
-  -webkit-animation: showModal 0.3s forwards;
-          animation: showModal 0.3s forwards;
 }
 
-.modal__content--inner {
+.modal__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,6 +660,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal__header {
@@ -730,7 +739,8 @@ html {
 }
 
 .modal__link svg {
-  width: 100%;
+  width: 99%;
+  height: 100%;
 }
 
 .modal__link:hover {
@@ -738,37 +748,12 @@ html {
 }
 
 .modal__text {
-  margin: 0 0 15px;
   font-size: 1.2857142857rem;
   color: #c5c5c5;
 }
 
-.modal.opened {
-  display: block;
-}
-
-@-webkit-keyframes showModal {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes showModal {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
+.modal.active {
+  scale: 1;
 }
 
 .project-card {
