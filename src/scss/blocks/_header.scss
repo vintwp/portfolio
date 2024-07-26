@@ -1,7 +1,11 @@
 .header {
   position: relative;
+  z-index: 20;
+
   padding: 10px 0;
+
   text-align: center;
+
   background-color: $color-black2;
 
   &__container {
