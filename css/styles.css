@@ -964,11 +964,10 @@ html {
 }
 
 .hero .list-technology {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 16px;
 }
 
 .hero .item-technology {
@@ -976,7 +975,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
 }
 
