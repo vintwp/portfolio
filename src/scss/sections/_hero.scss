@@ -93,7 +93,9 @@
 
   .item-technology {
     position: relative;
+
     display: flex;
+    align-items: center;
     justify-content: center;
 
     // max-width: 60px;
