@@ -86,14 +86,17 @@
   }
 
   .list-technology {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 16px;
   }
 
   .item-technology {
     position: relative;
     display: flex;
-    max-width: 60px;
+    justify-content: center;
+
+    // max-width: 60px;
     padding: 10px;
 
     img {
