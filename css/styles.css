@@ -779,10 +779,14 @@ html {
   left: 15px;
   padding: 5px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: #161513;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(37, 179, 37, 0.8);
   border-radius: 4px;
+}
+
+.project-card__label--red {
+  background-color: rgba(245, 26, 26, 0.8);
 }
 
 .project-card__thumb {
@@ -809,6 +813,12 @@ html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.project-card__thumb--fill img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .project-card__footer {
